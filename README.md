@@ -1,6 +1,7 @@
 Bootstrap Quickstart
 
 Questions? reach out to Michael Donnelly on slack or by mdonnelly@splunk.com
+
 TLDR:   
 1.	Go here - https://github.com/Splunk-ITSI-FieldUpdates/SharedInfraBootstrap
 2.	Download the Shared Infra bootstrap(s) 
