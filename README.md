@@ -1,6 +1,5 @@
 Shared Infrastructure Bootstrap 
-![alt text](https://splunk.box.com/v/sharedinfrabootstrap)
-https://splunk.box.com/v/sharedinfrabootstrap
+![alt text](https://github.com/Splunk-ITSI-FieldUpdates/SharedInfraBootstrap/blob/master/SharedInfraBootStrap.png)
 
 
 Questions? reach out to Martin Wiser on slack or by mwiser@splunk.com
