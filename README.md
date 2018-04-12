@@ -1,4 +1,7 @@
 Shared Infrastructure Bootstrap 
+![alt text](https://splunk.box.com/v/sharedinfrabootstrap)
+https://splunk.box.com/v/sharedinfrabootstrap
+
 
 Questions? reach out to Martin Wiser on slack or by mwiser@splunk.com
 
