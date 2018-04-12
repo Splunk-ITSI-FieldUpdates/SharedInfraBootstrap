@@ -1,6 +1,6 @@
-Bootstrap Quickstart
+Shared Infrastructure Bootstrap 
 
-Questions? reach out to Michael Donnelly on slack or by mdonnelly@splunk.com
+Questions? reach out to Martin Wiser on slack or by mwiser@splunk.com
 
 TLDR:   
 1.	Go here - https://github.com/Splunk-ITSI-FieldUpdates/SharedInfraBootstrap
@@ -10,62 +10,23 @@ TLDR:
 5.	Use the KPIs, services, etc!
  
 Background:
+Splunk's field organizations are busy bees that help make our products better by fine tuning out-of-the-box content or by building net new capabilities. These "enhancements" are useful to everyone so we decided to open-source them.
+
+The Shared Infrastructure Bootstrap contains common IT/Tech services and service dependencies that we encounter at customer sites. These common services power many business services but rather than building them yourself you can just download and install them and configure them for your environment.
+
 Bootstraps are essentially ITSI backup files, tailored to suit a specific need. Today these include:
 •	OS Template (for NIX and Windows)
 •	Shared IT Infrastructure
 •	VMware (coming soon)
-•	More to come.
+•	ITSI Healthchecks
+•	more to come.
 
 Bootstraps are intended for a one-time load into ITSI, then a tailoring to suit the customer’s needs.  Do not try to “upgrade” an environment by uploading a newer version of a bootstrap that’s already in use.  
-
-For bootstraps providing KPIs, please consult the ITSI Modules Documentation for the required methods for Getting Data In.   
-
- 
-OS Bootstrap:
-This bootstrap provides the elements necessary for monitoring of OS-level health, across CPU, Memory, Disk, and Networking.
-
-Bootstrap Contents: 
-OS-level KPIs, KPI base searches, and a KPI Template service.  
-
-Requirements: 
-Collection of OS metrics using the Windows TA or the *NIX TA, as shown in the ITSI Modules Documentation.
-
-Initial Configuration:
-•	Download the bootstrap, create a restore job, restore the bootstrap.
-•	Edit the 6 KPI Base searches named “OS:*”
-o	Verify / edit the base search’s index= settings for the environment
-o	Verify / edit the frequency of each base search
-•	Edit the service “Template KPIs – OS”
-o	For each data, verify / edit thresholds as needed
-o	Save your changes – but leave the Template service disabled.
-
-Using the Bootstrap:
-
-Option 1: New services for server monitoring
-For each group of servers where you wish to monitor CPU / Memory / Disk / Network: 
-•	Clone the “Template KPIs – OS” service and name it appropriately for the new service.
-•	Set entity filtering to match the correct hosts for that service.
-•	Add KPIs for application monitoring and other functions, as necessary.
-•	For each KPI, use the Thresholding window to verify data.  Edit thresholds as needed.
-•	Save and enable the new service.
-
-Option 2: Update existing services for server monitoring
-For each existing service where Windows / Linux OS-level monitoring is needed:
-•	Edit the existing service
-•	Remove existing KPIs that are redundant to those provided in the “Template KPIs – OS” service.
-•	Save the changes
-•	Clone KPIs from the “Template KPIs – OS” service.
-•	For each KPI, use the Thresholding window to verify data.  Edit thresholds as needed.
-•	Save the changes
-
-
 
 Shared IT Infrastructure:
 Roughly 45% of all P1 issues are caused by issues outside of the application stack.  Instead, they are caused by a failure somewhere in the Shared IT Infrastructure – the large collection of services provided by different groups within the IT organization.   
 
 This bootstrap provides a service dependency tree for modeling the Shared IT Infrastructure as a whole.
-
- 
 
 Bootstrap Contents: 
 Multiple services, in a dependency tree and using examples of entity filtering.  Also includes a CIO-level glass table, and save Service Analyzer view.
